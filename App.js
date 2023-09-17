@@ -55,9 +55,9 @@ export default function App() {
     }
   return (
     <View style={styles.container}>
-      <Text>{JSON.stringify(userInfo)}</Text>
+      <Text>{JSON.stringify(userInfo,null,2)}</Text>
       <Text>Welcome Guys</Text>
-      <Button title="Sign in with Google" onPress={promptAsync}></Button>
+      <Button title="Sign in with Google" onPress={()=>promptAsync()}></Button>
       <Button title="Delete Local Storage" onPress={()=> AsyncStorage.removeItem("@user")}></Button>
       <StatusBar style="auto" />
     </View>
